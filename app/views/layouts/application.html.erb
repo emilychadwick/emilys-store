@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EmilysStore</title>
+    <title>Emily's Store</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Products</li>
+    </ul>
+  </nav>
+
+  <%= yield %>
+
+  <footer>
+    &copy; 2017 Emily's Store
+  </footer>
+
   </body>
 </html>

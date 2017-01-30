@@ -1,0 +1,103 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* body */
+
+body {
+  padding-top: 40px;
+  overflow-x: hidden;
+  }
+
+/* navbar */
+
+.navbar { background-color: white}
+
+.navbar-inverse {
+
+  .navbar-nav>li>a:hover {
+    color: #add8e6;
+    text-decoration: none;
+  }
+
+  .navbar-toggle {
+    background-color: #bebebe;
+    border-color: #bebebe;
+  }
+
+  .navbar-toggle:hover {
+    background-color: #bebebe;
+  }
+
+  .navbar-toggle:focus {
+    background-color: #bebebe;
+  }
+
+  .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #bebebe;
+  }
+
+  .navbar-brand {
+    text-transform: uppercase;
+
+    a {
+      color: #bebebe;
+    }
+  }
+
+  .navbar-brand>a:hover {
+    color: #add8e6;
+    text-decoration: none;
+  }
+
+}
+
+/* index */
+
+.main2-img {
+  background-size: cover;
+  repeat: none;
+  margin: 0 auto;
+}
+
+/* typography */
+
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #add8e6;
+  text-align: center;
+}
+
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #add8e6;
+  text-align: center;
+}
+
+h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+  text-align: center;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+li {
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+

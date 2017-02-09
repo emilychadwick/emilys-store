@@ -54,10 +54,20 @@ body {
 
 /* index */
 
-.main2-img {
+.main-img {
   background-size: cover;
   repeat: none;
   margin: 0 auto;
+}
+
+/* products */
+
+.img-responsive {
+  margin: 0 auto;
+}
+
+.edit {
+  align: center;
 }
 
 /* typography */
@@ -71,6 +81,12 @@ h1 {
 h2 {
   font-family: Helvetica, Arial, sans-serif;
   color: #add8e6;
+  text-align: center;
+}
+
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
   text-align: center;
 }
 

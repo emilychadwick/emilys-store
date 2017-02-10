@@ -1,3 +1,19 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* products */
+
+.img-responsive {
+  margin: 0 auto;
+}
+
+.product_wrapper {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.product_button:hover, .product_button:focus {
+  background-color: white;
+  color: #add8e6;
+}

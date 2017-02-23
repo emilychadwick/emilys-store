@@ -4,9 +4,9 @@
 
   <!-- indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <% @products.each do |p, i| %>
+    <li data-target="#carousel-example-generic" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
+    <% end %>
   </ol>
 
   <!-- wrapper for slides -->

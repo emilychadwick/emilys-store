@@ -31,12 +31,20 @@
         </div> <!-- end navbar-header -->
 
         <div class="navbar-collapse collapse">
+
+          <%= form_tag("/products", method: "get", class: "nav navbar-nav form-inline") do %>
+            <%= label_tag %>
+            <%= text_field_tag 'query', nil, placeholder: 'Search', class: 'form-control' %>
+            <%= submit_tag("Submit", class: "btn btn-default") %>
+          <% end %>
+
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li><%= link_to "Products", products_path %>
           </ul>
+
         </div> <!-- end nav collapse -->
       </div> <!-- end container fluid -->
     </nav> <!-- end nav -->

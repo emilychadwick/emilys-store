@@ -17,3 +17,20 @@
   background-color: white;
   color: #add8e6;
 }
+
+/* all */
+
+.back-btn {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+ }
+
+ /* _form.html.erb page */
+
+.field {
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+  text-align: center;
+}

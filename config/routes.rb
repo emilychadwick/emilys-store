@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+  get 'static_pages/thank_you'
+
   root 'static_pages#index'
+
+  post 'static_pages/thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 

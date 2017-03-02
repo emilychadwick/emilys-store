@@ -34,7 +34,7 @@
 
           <%= form_tag("/products", method: "get", class: "nav navbar-nav form-inline") do %>
             <%= label_tag %>
-            <%= text_field_tag 'query', nil, placeholder: 'Search', class: 'form-control' %>
+            <%= text_field_tag(:q, nil, placeholder: 'Search', class: 'form-control') %>
             <%= submit_tag("Submit", class: "btn btn-default") %>
           <% end %>
 

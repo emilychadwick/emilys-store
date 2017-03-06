@@ -21,6 +21,13 @@ class ProductsController < ApplicationController
     end
   end
 
+  def thank_you
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    UserMailer.contact_form(@email, @name, @message).deliver_now
+  end
+
 
   # GET /products/1
   # GET /products/1.json

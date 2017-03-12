@@ -54,8 +54,17 @@
       </div> <!-- end container fluid -->
     </nav> <!-- end nav -->
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p id="notice" class="alert alert-info" button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></button>
+      <strong><%= notice %></strong>
+      </p>
+    <% end %>
+
+    <% if alert %>
+      <p id="notice" class="alert alert-info" button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></button>
+      <strong><%= notice %></strong>
+      </p>
+    <% end %>
 
   <%= yield %>
 

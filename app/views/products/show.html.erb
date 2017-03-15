@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <strong>Colour:</strong>
+  <strong>Color:</strong>
   <%= @product.colour %>
 </p>
 
@@ -25,5 +25,9 @@
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product), class: 'sbtn-btn-default' %> |
-<%= link_to 'Back', products_path, class: 'btn btn-default back-btn' %>
+<p>
+  <%= @product.highest_rating_comment %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default edit-btns' %> |
+<%= link_to 'Back', products_path, class: 'btn btn-default edit-btns' %>

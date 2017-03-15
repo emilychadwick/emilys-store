@@ -49,7 +49,32 @@ body {
     color: #add8e6;
     text-decoration: none;
   }
+}
 
+/* buttons */
+
+.back-btn {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+ }
+
+/* search bar */
+
+.search-btn {
+  background-color: white;
+  border: 1px black;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+}
+
+.search-btn:hover {
+  background-color: white;
+  color: #add8e6;
+}
+
+.search-text {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* index */

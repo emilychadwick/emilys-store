@@ -18,12 +18,18 @@
   color: #add8e6;
 }
 
-/* all */
+/* buttons */
 
-.back-btn {
-  display: table;
-  margin: 0 auto;
-  text-align: center;
+ .edit-btns {
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #9CBA7F;
+  border-radius: 2px;
+  border-color: black;
+ }
+
+ .edit-btns:hover {
+  color: #395D33;
  }
 
  /* _form.html.erb page */

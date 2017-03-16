@@ -5,9 +5,9 @@
         <%= product.price %></p>
 
         <div class="product_wrapper">
-          <span><%= link_to 'Show', product, class: "btn btn-inverse product_button" %></span>
-          <span><%= link_to 'Edit', edit_product_path(product), class: "btn btn-inverse product_button" %></span>
-          <span><%= link_to 'Destroy', product, method: :delete, date: {confirm: 'Are you sure?' }, class: "btn btn-inverse product_button" %></span>
+          <span><%= link_to 'Show', product, class: "btn btn-inverse edit-btns" %></span>
+          <span><%= link_to 'Edit', edit_product_path(product), class: "btn btn-inverse edit-btns" %></span>
+          <span><%= link_to 'Destroy', product, method: :delete, date: {confirm: 'Are you sure?' }, class: "btn btn-inverse edit-btns" %></span>
 
         </div> <!-- end wrapper-->
       </div> <!--col -->

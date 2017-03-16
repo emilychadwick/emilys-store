@@ -1,7 +1,7 @@
-<h1>Editing Product</h1>
+<h1>Edit Product</h1>
 
 <%= render 'form', product: @product %>
 
-  <%= link_to 'Show', class: 'btn btn-default @product' %>,
-  <%= link_to 'Back', products_path, class: 'btn btn-default back-btn' %>
+<%= link_to 'Show', @product, class: 'btn btn-default edit-btns' %>
+<%= link_to 'Back', products_path, class: 'btn btn-default edit-btns' %>
 

@@ -18,7 +18,16 @@
   color: #add8e6;
 }
 
-/* buttons */
+ /* _form.html.erb page */
+
+.field {
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+  text-align: center;
+}
+
+/* products */
 
  .edit-btns {
   background-color: white;
@@ -31,12 +40,3 @@
  .edit-btns:hover {
   color: #395D33;
  }
-
- /* _form.html.erb page */
-
-.field {
-  text-transform: uppercase;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #bebebe;
-  text-align: center;
-}

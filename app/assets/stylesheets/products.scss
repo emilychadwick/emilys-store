@@ -29,7 +29,7 @@
 
 /* products */
 
- .edit-btns {
+.edit-btns {
   background-color: white;
   font-family: Helvetica, Arial, sans-serif;
   color: #9CBA7F;
@@ -37,6 +37,15 @@
   border-color: black;
  }
 
- .edit-btns:hover {
+.edit-btns:hover {
   color: #395D33;
  }
+
+.rated {
+  display: table;
+  margin: 0 auto;
+ }
+
+.show-thumbnail {
+  background: rgba(173,216,230, 0.4),
+}

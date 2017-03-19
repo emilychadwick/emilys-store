@@ -9,10 +9,6 @@
  *
  */
 
- // require tree
-//= require jquery.raty
-//= require ratyrate
-
 ;
 (function($) {
   'use strict';

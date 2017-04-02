@@ -34,6 +34,8 @@ gem 'pg'
 gem 'devise'
 # gem cancancan (authorization)
 gem 'cancancan'
+# gem pagination
+gem 'will_paginate', '~> 3.1.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

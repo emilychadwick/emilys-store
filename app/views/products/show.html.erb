@@ -10,7 +10,7 @@
         <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
         <p><%= render 'new_comment' %></p>
         <p><%= render 'comments' %></p>
-        <%= will_paginate @comments %>
+        <p class="pagination"><%= will_paginate @comments %></p>
 
         <p><%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default edit-btns' %>  <%= link_to 'Back', products_path, class: 'btn btn-default edit-btns' %>
       </div>

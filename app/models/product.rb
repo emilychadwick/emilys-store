@@ -3,8 +3,6 @@ class Product < ApplicationRecord
   has_many :comments
 
   validates :name, presence: true
-  validates :product, presence: true
-  validates :rating, numericality: { only_integer: true }
 
   def highest_rating_comment
     comments.rating_desc.first

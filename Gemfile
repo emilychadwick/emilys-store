@@ -38,6 +38,7 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.1.1'
 # sendgrid
 gem 'sendgrid-ruby'
+gem 'stripe'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

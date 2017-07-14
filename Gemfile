@@ -39,6 +39,8 @@ gem 'will_paginate', '~> 3.1.1'
 # sendgrid
 gem 'sendgrid-ruby'
 gem 'stripe'
+gem 'brakeman'
+gem 'elevatezoom-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

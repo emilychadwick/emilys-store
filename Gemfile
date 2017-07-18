@@ -41,6 +41,7 @@ gem 'sendgrid-ruby'
 gem 'stripe'
 gem 'brakeman'
 gem 'elevatezoom-rails'
+gem 'dalli'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

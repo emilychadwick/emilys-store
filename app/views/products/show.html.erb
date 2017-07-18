@@ -12,7 +12,9 @@
 
   <h4>Description</h4>
 
+  <% cache @product do %>
   <p><%= @product.description %></p>
+  <% end %>
 
   <h4>Color:</h4>
     <p><%= @product.colour %></p>

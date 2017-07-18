@@ -1,3 +1,5 @@
+<% cache product do %>
+
 <div class="col-xs-12 col-s-6 col-m-6 col-lg-4">
   <%= image_tag(product.image_url, class: "img-responsive") %>
     <h3><%= product.name %></h3>
@@ -11,3 +13,5 @@
 
     </div> <!-- end wrapper-->
   </div> <!--col -->
+
+<% end %>

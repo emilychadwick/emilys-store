@@ -6,6 +6,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  #use JavaScript, not coffeescript
+  config.app_generators.javascript_engine = :javascript
+
   # Do not eager load code on boot.
   config.eager_load = false
 

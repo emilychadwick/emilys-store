@@ -59,8 +59,8 @@ Rails.application.configure do
 
   config.cache_store = :dalli_store,
   (ENV["MEMCACHIER_SERVERS"] || "").split(", "),
-  {:username => ENV["77727C"],
-    :password => ENV["C5FFB54BB9147027614B0835D0AEA584"],
+  {:username => ENV["MEMCACHIER_USERNAME"],
+    :password => ENV["MEMCACHIER_PASSWORD"],
     :failover => true,
     :socket_timeout => 1.5,
     :socket_failure_delay => 0.2,

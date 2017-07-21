@@ -42,7 +42,7 @@ gem 'stripe'
 gem 'brakeman'
 gem 'elevatezoom-rails'
 gem 'dalli'
-# gem 'redis-rails'
+gem 'redis-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

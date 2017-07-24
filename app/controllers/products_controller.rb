@@ -4,38 +4,17 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
-      search_term = params[:q]
-      logger.debug "Product: #{@products}"
-      @products = Product.search(search_term)
-    # return filtered list here
-    else
-      @products = Product.all
-    end
+    #if Rails.env.development?
+      #byebug
+    #end
+    @products = params[:q].present? ? Product.search(params[:q]) : Product.all
+    @products = @products.paginate(:page => params[:page], :per_page=>6)
   end
-
-  def self.search(search_term)
-    if Rails.env.development?
-      Product.where("name LIKE ?", "%#{search_term}")
-    else Rails.env.production?
-      Product.where("name ilike ?", "%#{search_term}")
-    end
-  end
-
-  def thank_you
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
-    UserMailer.contact_form(@email, @name, @message).deliver_now
-  end
-
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
-    @comments = @product.comments.paginate(:page => params[:page], :per_page => 15)
-    #assuming you load the @product in
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page =>5)
     @product.viewed!
   end
 
@@ -52,10 +31,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    logger.debug "Product: #{@product.name}"
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -68,9 +48,8 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1.json
   def update
     respond_to do |format|
-      print product_params
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to products_path, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -99,7 +78,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
-
-    before_action :authenticate_user!
-
 end

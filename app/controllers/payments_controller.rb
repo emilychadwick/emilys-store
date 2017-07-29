@@ -2,12 +2,14 @@ class PaymentsController < ApplicationController
 
   def create
 
-    @product = Product.find(param[:product_id])
-    if user_signed_in?
-      @user = current_user
-    else
-      redirect_to new_user_registration_page
-    end
+    @product = Product.find(params[:product_id])
+
+    # if user_signed_in?
+    #   @user = current_user
+    # else
+    #   redirect_to new_user_registration_page
+    # end
+    @user = current_user
 
     token = params[:stripeToken]
     # create the charge on Stripe's servers to charge user card
@@ -17,13 +19,11 @@ class PaymentsController < ApplicationController
         currency: "usd",
         source: token,
         description: params[:stripeEmail],
-        receipt_email: "example@fake.com"
       )
 
       if charge.paid
         Order.create(
           product_id: @product.id,
-          user_id: @user.id,
           total: @product.price
           )
         flash[:success] = "Your payment was processed successfully"
